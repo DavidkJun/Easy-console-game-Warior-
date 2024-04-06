@@ -12,3 +12,7 @@ level(){
     if(this.lvl > 100){this.lvl = 100};
     return this.lvl;
   }
+rank(){
+   return this.warrior_ranks[Math.floor(this.lvl/10)];
+   
+  }
