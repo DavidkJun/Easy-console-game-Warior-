@@ -40,3 +40,30 @@ training([name_achievement,enemy_exp,minlvl]){
    }
 
 }
+
+  battle(enemy_level){
+        if ( enemy_level<= 0 || enemy_level > 100) {
+      return "Invalid level";
+    }
+    if (enemy_level+1 < this.lvl) {
+      return "Easy fight";
+    }
+    if (enemy_level+1 == this.lvl) {
+      this.warrior_experiance += 5;
+      this.update()
+      return "A good fight";
+    }
+    if (enemy_level == this.lvl) {
+      this.warrior_experiance += 10;
+      this.update()
+      return "A good fight";
+    }
+    if (Math.floor(this.lvl/10) < Math.floor(enemy_level/10) && enemy_level > this.lvl+4) {
+      return "You've been defeated";
+    }
+    if (enemy_level > this.lvl) {
+      this.warrior_experiance += 20 * (enemy_level-this.lvl)**2;
+      this.update();
+      return "An intense fight";
+    }
+  }  
