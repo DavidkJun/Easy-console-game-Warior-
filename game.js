@@ -20,4 +20,8 @@ experience(){
  
   if(this.warrior_experiance > 10000){ this.warrior_experiance = 10000};
   return this.warrior_experiance;
+}
+achievements(){
+    return this.warrior_achievements;
     
+  }  
