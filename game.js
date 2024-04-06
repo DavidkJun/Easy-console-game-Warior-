@@ -6,3 +6,9 @@ class Warrior{
     this.warrior_experiance = 100;
     this.warrior_achievements =[];
       }
+level(){
+
+    this.lvl = Math.floor(this.warrior_experiance/100);
+    if(this.lvl > 100){this.lvl = 100};
+    return this.lvl;
+  }
