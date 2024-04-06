@@ -25,3 +25,18 @@ achievements(){
     return this.warrior_achievements;
     
   }  
+training([name_achievement,enemy_exp,minlvl]){
+    if(this.lvl >= minlvl){
+      //brake point
+      this.warrior_achievements.push(name_achievement);
+      this.warrior_experiance += enemy_exp;
+      this.update()
+      return name_achievement;
+      }
+     else{
+      
+      return "Not strong enough";
+      
+   }
+
+}
