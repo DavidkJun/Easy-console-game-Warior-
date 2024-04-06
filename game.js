@@ -67,3 +67,9 @@ training([name_achievement,enemy_exp,minlvl]){
       return "An intense fight";
     }
   }  
+update(){
+   this.level();
+   this.experience();
+   this.rank(); 
+  }
+}
